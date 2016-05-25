@@ -5,10 +5,6 @@
     <title>登陆</title>
     <link type="text/css" rel="stylesheet" href="/Public/js/style/reset.css">
     <link type="text/css" rel="stylesheet" href="/Public/js/style/main.css">
-    <!--[if IE 6]>
-    <script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js"></script>
-    <script type="text/javascript" src="js/ie6Fixpng.js"></script>
-    <![endif]-->
 </head>
 
 <body>
@@ -31,6 +27,9 @@
                 <li class="mb_10"><input type="text"  name="username" placeholder="请输入用户名" class="login_input user_icon"/></li>
                 <li class="l_tit">密码</li>
                 <li class="mb_10"><input type="password" name="password" placeholder="请输入密码" class="login_input user_icon"/></li>
+                <li class="l_tit">验证码</li>
+                <li class="mb_10"><input id="verify_img" type="password" name="verify" placeholder="请输入验证码" class="login_input user_icon"/></li>
+                <img width="50%" height="50%" src="/admin.php?m=admin&c=login&a=verify_c" alt="验证码" title="点击刷新">
                 <li class="autoLogin"><input type="checkbox" id="a1" class="checked"><label for="a1">自动登陆</label></li>
                 <li><input type="button" value="" class="login_btn" onclick="login.check()"></li>
             </ul>
@@ -66,4 +65,5 @@
 <script src="/Public/js/layer/layer.js"></script>
 <script src="/Public/js/layer.js"></script>
 <script src="/Public/js/admin/login.js"></script>
+<script src="/Public/js/admin/common.js"></script>
 </html>

@@ -8,6 +8,7 @@
 
 namespace Admin\Controller;
 use Think\Controller;
+use Think\Think;
 
 class LoginController extends Controller
 {
@@ -15,7 +16,12 @@ class LoginController extends Controller
        if (session('adminUser')){
            $this->redirect('/admin.php');
        }
-       return $this->display();
+
+       $this->display();
+   }
+   public function verify_c(){
+       $verify = new \Think\Verify();
+       $verify->entry();
    }
    public function check(){
        $username = $_POST['username'];
